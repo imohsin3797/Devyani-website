@@ -47,25 +47,27 @@ export default function ContactInfo() {
   };
 
   return (
-    <Box component="section" id="contact" sx={{ py: { xs: 6, md: 8 }, bgcolor: "background.default" }}>
-      <Container maxWidth="lg" sx={{ px: { xs: 3, md: 4 } }}>
+    <Box component="section" id="contact" sx={{ py: { xs: 4, md: 8 }, bgcolor: "background.default" }}>
+      <Container maxWidth="lg" sx={{ px: { xs: 2, md: 4 } }}>
         <Box
           sx={{
             display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
             width: '100%',
-            gap: 4,
+            gap: { xs: 6, md: 4 },
           }}
         >
           {/* Contact Form */}
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1, width: '100%' }}>
             <Typography 
               variant="h4" 
               component="h2" 
               sx={{ 
-                mb: 4, 
+                mb: { xs: 3, md: 4 }, 
                 fontWeight: 700,
                 color: 'black',
-                textAlign: 'center'
+                textAlign: 'center',
+                fontSize: { xs: '1.75rem', md: '2.125rem' }
               }}
             >
               Contact Us
@@ -73,9 +75,9 @@ export default function ContactInfo() {
             <Paper 
               component="form" 
               onSubmit={handleSubmit}
-              sx={{ p: 3 }}
+              sx={{ p: { xs: 2, md: 3 } }}
             >
-              <Stack spacing={3}>
+              <Stack spacing={2.5}>
                 <TextField
                   required
                   fullWidth
@@ -109,7 +111,7 @@ export default function ContactInfo() {
                   variant="contained"
                   size="large"
                   sx={{
-                    height: 56,
+                    height: { xs: 48, md: 56 },
                     textTransform: "none",
                     fontWeight: 700,
                     bgcolor: "#BFE3E0",
@@ -125,27 +127,29 @@ export default function ContactInfo() {
             </Paper>
           </Box>
 
-          <Divider orientation="vertical" flexItem />
+          {/* Divider - only show on desktop */}
+          <Divider orientation="vertical" flexItem sx={{ display: { xs: 'none', md: 'block' } }} />
 
           {/* Photo Gallery */}
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1, width: '100%' }}>
             <Typography 
               variant="h4" 
               component="h2" 
               sx={{ 
-                mb: 4, 
+                mb: { xs: 3, md: 4 }, 
                 fontWeight: 700,
                 color: 'black',
-                textAlign: 'center'
+                textAlign: 'center',
+                fontSize: { xs: '1.75rem', md: '2.125rem' }
               }}
             >
-              Our Office
+              Our Offices
             </Typography>
             <ImageList
               sx={{ 
                 width: '100%',
-                height: 500,
-                gap: 8
+                height: { xs: 400, md: 500 },
+                gap: { xs: 4, md: 8 }
               }}
               cols={2}
               rowHeight={150}

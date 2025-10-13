@@ -8,36 +8,44 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
-import { Place, AccessTime, Email, Phone } from "@mui/icons-material";
+import { Place, AccessTime, Email, Phone, Fax } from "@mui/icons-material";
 
 export default function Footer() {
   return (
     <Box
       component="footer"
       sx={{
-        bgcolor: "#FBF6E8", // soft cream background
+        bgcolor: "#FBF6E8",
         color: "rgba(0,0,0,0.85)",
         pt: { xs: 4, md: 6 },
         pb: { xs: 4, md: 6 },
       }}
     >
-      <Container maxWidth="lg">
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
+        <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: { xs: 4, md: 6 }
+        }}>
           {/* Contact panel (left) */}
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ 
+            flex: 1,
+            width: '100%'
+          }}>
             <Typography
               variant="h4"
               sx={{
                 fontWeight: 800,
                 letterSpacing: 0.2,
-                mb: 2,
+                mb: 3,
+                fontSize: { xs: '1.75rem', md: '2.125rem' }
               }}
             >
               Visit Us!
             </Typography>
 
-            {/* Address */}
-            <Stack direction="row" spacing={2} alignItems="flex-start" mb={2}>
+            {/* Waterford Location */}
+            <Stack direction="row" spacing={2} alignItems="flex-start" mb={3}>
               <Box
                 sx={{
                   width: 40,
@@ -52,18 +60,68 @@ export default function Footer() {
                 <Place fontSize="small" />
               </Box>
               <Box>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  Our Address
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  Waterford Office
                 </Typography>
-                <Typography variant="body1">71 E. Long Lake Rd.</Typography>
-                <Typography variant="body1">
-                  Bloomfield Hills, MI 48304
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                  2561 Elizabeth Lake Rd
                 </Typography>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                  Waterford, MI 48328
+                </Typography>
+                <Stack direction="row" spacing={2} mt={1}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Phone fontSize="small" />
+                    <Typography variant="body2">(248) 682-3300</Typography>
+                  </Stack>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Fax fontSize="small" />
+                    <Typography variant="body2">(248) 682-0026</Typography>
+                  </Stack>
+                </Stack>
+              </Box>
+            </Stack>
+
+            {/* Lake Orion Location */}
+            <Stack direction="row" spacing={2} alignItems="flex-start" mb={3}>
+              <Box
+                sx={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: 2,
+                  bgcolor: "#E4F2F0",
+                  display: "grid",
+                  placeItems: "center",
+                  flexShrink: 0,
+                }}
+              >
+                <Place fontSize="small" />
+              </Box>
+              <Box>
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  Lake Orion Office
+                </Typography>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                  1408 S. Lapeer Rd
+                </Typography>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                  Lake Orion, MI 48360
+                </Typography>
+                <Stack direction="row" spacing={2} mt={1}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Phone fontSize="small" />
+                    <Typography variant="body2">(248) 690-9285</Typography>
+                  </Stack>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Fax fontSize="small" />
+                    <Typography variant="body2">(248) 690-9603</Typography>
+                  </Stack>
+                </Stack>
               </Box>
             </Stack>
 
             {/* Hours */}
-            <Stack direction="row" spacing={2} alignItems="flex-start" mb={2}>
+            <Stack direction="row" spacing={2} alignItems="flex-start" mb={3}>
               <Box
                 sx={{
                   width: 40,
@@ -78,87 +136,38 @@ export default function Footer() {
                 <AccessTime fontSize="small" />
               </Box>
               <Box>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  Office Hours
+                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: { xs: '1rem', md: '1.25rem' } }}>
+                  Office Hours (Both Locations)
                 </Typography>
-                <Typography variant="body2">
-                  <strong>Monday – Thursday:</strong>&nbsp;8:00AM – 5:00PM
-                </Typography>
-                <Typography variant="body2">
-                  <strong>After Hours:</strong>&nbsp;5:00PM – 6:00PM
-                </Typography>
-                <Typography variant="body2">
-                  <strong>Friday:</strong>&nbsp;8:00AM – 5:00PM
-                </Typography>
-                <Typography variant="body2">
-                  <strong>Saturday After Hours:</strong>&nbsp;8:00AM – 12:00PM
+                <Typography variant="body2" sx={{ fontSize: { xs: '0.875rem', md: '1rem' } }}>
+                  <strong>Monday – Friday:</strong>&nbsp;8:45AM – 4:30PM
                 </Typography>
               </Box>
-            </Stack>
-
-            {/* Email */}
-            <Stack direction="row" spacing={2} alignItems="flex-start" mb={2}>
-              <Box
-                sx={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 2,
-                  bgcolor: "#E4F2F0",
-                  display: "grid",
-                  placeItems: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <Email fontSize="small" />
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  Email Us
-                </Typography>
-                <Link
-                  href="mailto:info@serenitypeds.com"
-                  underline="hover"
-                  sx={{ color: "inherit" }}
-                >
-                  info@serenitypeds.com
-                </Link>
-              </Box>
-            </Stack>
-
-            <Divider sx={{ my: 2 }} />
-
-            {/* COVID note + phone */}
-            <Typography variant="body2" sx={{ fontStyle: "italic", mb: 1.5 }}>
-              Due to the COVID-19 pandemic, we are not currently offering office
-              tours for new patients.
-            </Typography>
-
-            <Stack direction="row" spacing={1.5} alignItems="center">
-              <Phone fontSize="small" />
-              <Typography variant="h6" sx={{ m: 0 }}>
-                (248)-533-0000
-              </Typography>
             </Stack>
           </Box>
 
-          {/* Vertical Divider */}
-          <Divider orientation="vertical" flexItem sx={{ mx: 4, display: { xs: 'none', md: 'block' } }} />
-
-          {/* Map (right) */}
-          <Box sx={{ flex: 1, display: { xs: 'none', md: 'block' } }}>
+          {/* Maps Container */}
+          <Box sx={{ 
+            flex: 1,
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 3
+          }}>
+            {/* Waterford Map */}
             <Box
               sx={{
                 borderRadius: 2,
                 overflow: "hidden",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                height: 400,
+                width: '100%',
+                height: { xs: 200, sm: 250, md: 300 },
                 bgcolor: "#eee",
               }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.080982848303!2d-83.24463548453686!3d42.55419997917392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c46b06b3f0c1%3A0x9f9c49f74c4e2739!2s71%20E%20Long%20Lake%20Rd%2C%20Bloomfield%20Hills%2C%20MI%2048304!5e0!3m2!1sen!2sus!4v1629308075561!5m2!1sen!2sus"
-                title="Map to Serenity Pediatrics"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.8146670045483!2d-83.3866492!3d42.6615293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824a3b859453acb%3A0x71923ed5999e3f65!2s2561%20Elizabeth%20Lake%20Rd%2C%20Waterford%20Twp%2C%20MI%2048328!5e0!3m2!1sen!2sus!4v1629308075561!5m2!1sen!2sus"
+                title="Map to Waterford Office"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
@@ -170,23 +179,21 @@ export default function Footer() {
                 }}
               />
             </Box>
-          </Box>
 
-          {/* Mobile Map */}
-          <Box sx={{ display: { xs: 'block', md: 'none' }, width: '100%', mt: 4 }}>
+            {/* Lake Orion Map */}
             <Box
               sx={{
                 borderRadius: 2,
                 overflow: "hidden",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                height: 300,
+                width: '100%',
+                height: { xs: 200, sm: 250, md: 300 },
                 bgcolor: "#eee",
               }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.080982848303!2d-83.24463548453686!3d42.55419997917392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824c46b06b3f0c1%3A0x9f9c49f74c4e2739!2s71%20E%20Long%20Lake%20Rd%2C%20Bloomfield%20Hills%2C%20MI%2048304!5e0!3m2!1sen!2sus!4v1629308075561!5m2!1sen!2sus"
-                title="Map to Serenity Pediatrics"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.8146670045483!2d-83.2416565!3d42.7827183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824ea0a6c6c1c63%3A0x9f5b5a5c76c87a9a!2s1408%20S%20Lapeer%20Rd%2C%20Lake%20Orion%2C%20MI%2048360!5e0!3m2!1sen!2sus!4v1629308075561!5m2!1sen!2sus"
+                title="Map to Lake Orion Office"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
@@ -209,11 +216,11 @@ export default function Footer() {
           justifyContent="space-between"
           spacing={1}
         >
-          <Typography variant="caption" sx={{ opacity: 0.7 }}>
-            © {new Date().getFullYear()} Serenity Pediatrics
+          <Typography variant="caption" sx={{ opacity: 0.7, textAlign: { xs: 'center', sm: 'left' } }}>
+            © {new Date().getFullYear()} Devyani Khambete Pediatrics
           </Typography>
-          <Typography variant="caption" sx={{ opacity: 0.7 }}>
-            71 E. Long Lake Rd, Bloomfield Hills, MI 48304
+          <Typography variant="caption" sx={{ opacity: 0.7, textAlign: { xs: 'center', sm: 'right' } }}>
+            Waterford & Lake Orion, MI
           </Typography>
         </Stack>
       </Container>

@@ -31,13 +31,13 @@ export default function Hero({
   return (
     <Box component="section" sx={{ bgcolor: "background.default" }}>
       {/* Banner */}
-      <Box sx={{ position: "relative", width: "100%", minHeight: { xs: 420, sm: 520, md: 620 } }}>
+      <Box sx={{ position: "relative", width: "100%", minHeight: { xs: 300, sm: 420, md: 520 } }}>
         <Image
           src={imageSrc}
           alt="Pediatrician caring for a child in clinic"
           priority
           fill
-          sizes="100vw"
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 100vw, 100vw"
           style={{ objectFit: "cover" }}
         />
 
@@ -69,7 +69,7 @@ export default function Hero({
             px: sectionPX,
           }}
         >
-          <Box>
+          <Box sx={{ width: "100%", maxWidth: { xs: "100%", sm: "90%", md: "80%" } }}>
             <Typography
               component="h1"
               sx={{
@@ -77,8 +77,9 @@ export default function Hero({
                 fontWeight: 900,
                 letterSpacing: 0.2,
                 textShadow: "0 2px 18px rgba(0,0,0,0.45)",
-                fontSize: { xs: 32, sm: 44, md: 56 },
-                lineHeight: 1.1,
+                fontSize: { xs: 28, sm: 40, md: 56 },
+                lineHeight: { xs: 1.2, sm: 1.1 },
+                wordBreak: "break-word",
               }}
             >
               {title}
@@ -88,10 +89,10 @@ export default function Hero({
               sx={{
                 color: alpha("#fff", 0.95),
                 textShadow: "0 2px 12px rgba(0,0,0,0.45)",
-                fontSize: { xs: 15, sm: 17, md: 18 },
-                maxWidth: 860,
+                fontSize: { xs: 14, sm: 16, md: 18 },
+                maxWidth: { xs: 300, sm: 500, md: 860 },
                 mx: "auto",
-                mt: 1.5,
+                mt: { xs: 1, sm: 1.5 },
                 lineHeight: 1.6,
               }}
             >
@@ -106,28 +107,26 @@ export default function Hero({
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)", // span entire width on all sizes
-            gap: 0, // boxes touch
+            gridTemplateColumns: { xs: "1fr", sm: "repeat(3, 1fr)" },
+            gap: { xs: 1, sm: 0 },
             width: "100%",
-            // On very small screens, force a single row with scroll
-            overflowX: { xs: "auto", md: "visible" },
-            whiteSpace: { xs: "nowrap", md: "normal" },
+            p: { xs: 1, sm: 0 },
           }}
         >
           <InfoCard
             title="Newborn Services"
             color={cardColor}
-            icon={<ChildCareRoundedIcon sx={{ fontSize: { xs: 36, md: 42 }, color: "common.black" }} />}
+            icon={<ChildCareRoundedIcon sx={{ fontSize: { xs: 32, sm: 36, md: 42 }, color: "common.black" }} />}
           />
           <InfoCard
             title="Toddler / School-Age / Teen Health"
             color={cardColor}
-            icon={<SchoolRoundedIcon sx={{ fontSize: { xs: 36, md: 42 }, color: "common.black" }} />}
+            icon={<SchoolRoundedIcon sx={{ fontSize: { xs: 32, sm: 36, md: 42 }, color: "common.black" }} />}
           />
           <InfoCard
             title="Same-day Sick Child Visits"
             color={cardColor}
-            icon={<MedicalServicesRoundedIcon sx={{ fontSize: { xs: 36, md: 42 }, color: "common.black" }} />}
+            icon={<MedicalServicesRoundedIcon sx={{ fontSize: { xs: 32, sm: 36, md: 42 }, color: "common.black" }} />}
           />
         </Box>
       </Box>
@@ -149,17 +148,16 @@ function InfoCard({
       square
       elevation={0}
       sx={(t) => ({
-        p: { xs: 2.5, sm: 3 },
+        p: { xs: 2, sm: 2.5, md: 3 },
         backgroundColor: color,
-        // faint white dividers
-        borderRight: `1px solid ${alpha(t.palette.common.white, 0.5)}`, // between columns
-        "&:last-of-type": { borderRight: "none" }, // no divider after the last column
+        borderRight: { xs: "none", sm: `1px solid ${alpha(t.palette.common.white, 0.5)}` },
+        "&:last-of-type": { borderRight: "none" },
         textAlign: "center",
         color: t.palette.common.black,
-        minWidth: { xs: 280, md: "auto" }, // helps keep readable when scrolling on xs
+        borderRadius: { xs: 1, sm: 0 },
       })}
     >
-      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 1.25 }}>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: { xs: 1, sm: 1.25 } }}>
         <Box aria-hidden sx={{ opacity: 0.95 }}>
           {icon}
         </Box>
@@ -167,10 +165,10 @@ function InfoCard({
           component="h3"
           sx={{
             fontWeight: 800,
-            fontSize: { xs: 16, sm: 18 },
+            fontSize: { xs: 15, sm: 16, md: 18 },
             letterSpacing: 0.2,
             color: "inherit",
-            whiteSpace: "normal",
+            lineHeight: 1.3,
           }}
         >
           {title}

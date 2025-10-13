@@ -60,15 +60,13 @@ export default function AboutUsCards() {
               alt="Doctor with young patient"
               sx={{ objectFit: "cover" }}
             />
-            <CardContent>
+            <CardContent sx={{ textAlign: 'center' }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 700 }}>
-                Our Mission
+                Devyani Khambete, MD
               </Typography>
               <Typography variant="body1">
-                We are dedicated to providing comprehensive, compassionate pediatric care 
-                that focuses on the whole child. Our evidence-based approach combines 
-                with a warm, welcoming environment to ensure the best possible healthcare 
-                experience for your family.
+                
+Dr. Khambete obtained her medical degree from Seth GS Medical College and completed her Pediatric Residency at Henry Ford Hospital. She is board certified in Pediatrics.
               </Typography>
             </CardContent>
           </Card>
@@ -94,15 +92,12 @@ export default function AboutUsCards() {
               alt="Doctor consulting with family"
               sx={{ objectFit: "cover" }}
             />
-            <CardContent>
+            <CardContent sx={{ textAlign: 'center' }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 700 }}>
-                Our Approach
+                Parvathi Sivaram, MD
               </Typography>
               <Typography variant="body1">
-                We believe in building lasting relationships with our patients and their 
-                families. By taking the time to truly listen and understand each child's 
-                unique needs, we can provide personalized care that supports their 
-                health and development at every stage.
+              Dr. Sivaram obtained her medical degree from University of Coimatore Medical College and completed her Pediatric Residency at Henry Ford Hospital and is board certified in pediatrics. She is also board certified in Allergy and Immunology which she completed at Henry Ford Hospital as well.
               </Typography>
             </CardContent>
           </Card>

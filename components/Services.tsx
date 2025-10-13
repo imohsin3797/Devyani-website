@@ -122,8 +122,8 @@ export default function Services() {
                   borderColor: alpha("#0f766e", 0.3),
                 },
                 display: "flex",
-                flexDirection: "row",
-                height: 300,
+                flexDirection: { xs: "column", md: "row" },
+                height: { xs: "auto", md: 300 },
                 overflow: "hidden",
               }}
             >
@@ -131,7 +131,8 @@ export default function Services() {
                 <>
                   <Box
                     sx={{
-                      width: "50%",
+                      width: { xs: "100%", md: "50%" },
+                      height: { xs: 200, md: "auto" },
                       backgroundImage: `url(${imageSrc})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
@@ -139,8 +140,8 @@ export default function Services() {
                   />
                   <Box
                     sx={{
-                      width: "50%",
-                      p: 4,
+                      width: { xs: "100%", md: "50%" },
+                      p: { xs: 3, md: 4 },
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
@@ -174,13 +175,14 @@ export default function Services() {
                 <>
                   <Box
                     sx={{
-                      width: "50%",
-                      p: 4,
+                      width: { xs: "100%", md: "50%" },
+                      p: { xs: 3, md: 4 },
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
                       textAlign: "center",
+                      order: { xs: 2, md: 1 }
                     }}
                   >
                     <Box
@@ -206,10 +208,12 @@ export default function Services() {
                   </Box>
                   <Box
                     sx={{
-                      width: "50%",
+                      width: { xs: "100%", md: "50%" },
+                      height: { xs: 200, md: "auto" },
                       backgroundImage: `url(${imageSrc})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
+                      order: { xs: 1, md: 2 }
                     }}
                   />
                 </>
