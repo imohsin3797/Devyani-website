@@ -8,7 +8,8 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
-import { Place, AccessTime, Email, Phone, Fax } from "@mui/icons-material";
+import { Place, AccessTime, Email, Phone, Fax, Facebook, Instagram } from "@mui/icons-material";
+import IconButton from "@mui/material/IconButton";
 
 export default function Footer() {
   return (
@@ -144,6 +145,40 @@ export default function Footer() {
                 </Typography>
               </Box>
             </Stack>
+
+            {/* Social Media Icons */}
+            <Stack direction="row" spacing={2} alignItems="center" mt={2}>
+              <IconButton
+                component="a"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                sx={{
+                  color: "black",
+                  "&:hover": {
+                    bgcolor: "rgba(0, 0, 0, 0.04)",
+                  },
+                }}
+              >
+                <Facebook />
+              </IconButton>
+              <IconButton
+                component="a"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                sx={{
+                  color: "black",
+                  "&:hover": {
+                    bgcolor: "rgba(0, 0, 0, 0.04)",
+                  },
+                }}
+              >
+                <Instagram />
+              </IconButton>
+            </Stack>
           </Box>
 
           {/* Maps Container */}
@@ -217,7 +252,7 @@ export default function Footer() {
           spacing={1}
         >
           <Typography variant="caption" sx={{ opacity: 0.7, textAlign: { xs: 'center', sm: 'left' } }}>
-            © {new Date().getFullYear()} Devyani Khambete Pediatrics
+            © {new Date().getFullYear()} Devyani Khambete MDPC
           </Typography>
           <Typography variant="caption" sx={{ opacity: 0.7, textAlign: { xs: 'center', sm: 'right' } }}>
             Waterford & Lake Orion, MI

@@ -17,6 +17,8 @@ import Psychology from "@mui/icons-material/Psychology";
 import Healing from "@mui/icons-material/Healing";
 import MedicalServices from "@mui/icons-material/MedicalServices";
 import HealthAndSafety from "@mui/icons-material/HealthAndSafety";
+import Vaccines from "@mui/icons-material/Vaccines";
+import SupportAgent from "@mui/icons-material/SupportAgent";
 
 type Service = {
   title: string;
@@ -27,11 +29,25 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    title: "New Parent Consults",
+    title: "Free New Parent Consults",
     desc:
       "We offer new parent visits prior to birth to help families feel comfortable with our practice and providers, and to answer any questions expecting parents may have.",
     Icon: ChildCare,
     imageSrc: "/images/new-parent.jpg",
+  },
+  {
+    title: "Care Management",
+    desc:
+      "Personalized management for children with special needs. We have an embedded care manager in-house to coordinate care, connect families with resources, and ensure comprehensive support for your child's unique healthcare needs.",
+    Icon: SupportAgent,
+    imageSrc: "/images/care-management.jpg.webp",
+  },
+  {
+    title: "Vaccine Hesitancy Support",
+    desc:
+      "We provide compassionate, non-judgmental support for families with vaccine hesitancy. Our providers take time to listen to your concerns, answer questions with evidence-based information, and work collaboratively to create a vaccination plan that feels right for your family.",
+    Icon: Vaccines,
+    imageSrc: "/images/vaccine-hesitancy.jpg",
   },
   {
     title: "Sports/Activity Physicals",
@@ -45,12 +61,12 @@ const SERVICES: Service[] = [
     desc:
       "Medication initiation and ongoing management with careful follow-up and adjustments to achieve the desired outcomes for your child.",
     Icon: Psychology,
-    imageSrc: "/images/adhd-management.webp",
+    imageSrc: "/images/adhd.jpg",
   },
   {
     title: "Asthma Management",
     desc:
-      "Comprehensive care including medication initiation, in-office spirometry, and adjustment of therapies to improve control and quality of life.",
+      "Comprehensive care including medication initiation, creating an asthma action plan, and adjustment of therapies to improve control and quality of life.",
     Icon: Healing,
     imageSrc: "/images/asthma-treatment.jpg",
   },

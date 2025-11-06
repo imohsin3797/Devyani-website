@@ -11,6 +11,8 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
+import Facebook from "@mui/icons-material/Facebook";
+import Instagram from "@mui/icons-material/Instagram";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -131,7 +133,7 @@ export default function HeaderBar() {
               fontFamily: `'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,
             }}
           >
-            Devyani Khambete Pediatrics
+            Devyani Khambete MDPC
           </Typography>
         </Box>
 
@@ -140,8 +142,38 @@ export default function HeaderBar() {
           {NavButtons}
         </Box>
 
-        {/* Right: Phone */}
+        {/* Right: Social Media + Phone */}
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 1 }}>
+          <IconButton
+            component="a"
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                bgcolor: "rgba(0, 0, 0, 0.04)",
+              },
+            }}
+          >
+            <Facebook fontSize="small" />
+          </IconButton>
+          <IconButton
+            component="a"
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            sx={{
+              color: "text.primary",
+              "&:hover": {
+                bgcolor: "rgba(0, 0, 0, 0.04)",
+              },
+            }}
+          >
+            <Instagram fontSize="small" />
+          </IconButton>
           <PhoneLink />
         </Box>
 
