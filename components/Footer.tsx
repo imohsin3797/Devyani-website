@@ -8,7 +8,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
-import { Place, AccessTime, Email, Phone, Fax, Facebook, Instagram } from "@mui/icons-material";
+import { Place, AccessTime, Email, Phone, Fax, Facebook } from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
 
 export default function Footer() {
@@ -150,7 +150,7 @@ export default function Footer() {
             <Stack direction="row" spacing={2} alignItems="center" mt={2}>
               <IconButton
                 component="a"
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/dkmdpc"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -162,21 +162,6 @@ export default function Footer() {
                 }}
               >
                 <Facebook />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                sx={{
-                  color: "black",
-                  "&:hover": {
-                    bgcolor: "rgba(0, 0, 0, 0.04)",
-                  },
-                }}
-              >
-                <Instagram />
               </IconButton>
             </Stack>
           </Box>

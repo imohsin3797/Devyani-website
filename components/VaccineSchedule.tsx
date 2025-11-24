@@ -24,14 +24,13 @@ export default function VaccineSchedule() {
         >
           Vaccine Schedules
         </Typography>
-        <Box sx={{ display: "flex", gap: 4, flexWrap: "wrap", justifyContent: "center" }}>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              textAlign: "center",
-              width: { xs: "100%", sm: "45%" }
+              textAlign: "center"
             }}
           >
             <Box
@@ -48,54 +47,16 @@ export default function VaccineSchedule() {
             >
               <VaccinesIcon sx={{ fontSize: 40 }} />
             </Box>
-            <Typography variant="h6" sx={{ fontWeight: 700, mb: 2, color: "common.black" }}>
-              Birth-6 Years
-            </Typography>
             <Button
               variant="contained"
+              size="large"
               sx={{
                 bgcolor: "#0f766e",
-                "&:hover": { bgcolor: alpha("#0f766e", 0.8) }
+                "&:hover": { bgcolor: alpha("#0f766e", 0.8) },
+                px: 4,
+                py: 1.5
               }}
-              onClick={() => window.open("/pdfs/vaccine-schedule-birth-6.pdf", "_blank")}
-            >
-              View Schedule
-            </Button>
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              textAlign: "center",
-              width: { xs: "100%", sm: "45%" }
-            }}
-          >
-            <Box
-              sx={{
-                width: 80,
-                height: 80,
-                borderRadius: "50%",
-                bgcolor: "#BFE3E0",
-                color: "#0f766e",
-                display: "grid",
-                placeItems: "center",
-                mb: 2
-              }}
-            >
-              <VaccinesIcon sx={{ fontSize: 40 }} />
-            </Box>
-            <Typography variant="h6" sx={{ fontWeight: 700, mb: 2, color: "common.black" }}>
-              7-18 Years
-            </Typography>
-            <Button
-              variant="contained"
-              sx={{
-                bgcolor: "#0f766e",
-                "&:hover": { bgcolor: alpha("#0f766e", 0.8) }
-              }}
-              onClick={() => window.open("/pdfs/vaccine-schedule-7-18.pdf", "_blank")}
+              onClick={() => window.open("/pdfs/vaccine-schedule.pdf", "_blank")}
             >
               View Schedule
             </Button>

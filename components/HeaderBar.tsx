@@ -12,7 +12,6 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import Facebook from "@mui/icons-material/Facebook";
-import Instagram from "@mui/icons-material/Instagram";
 import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -142,11 +141,57 @@ export default function HeaderBar() {
           {NavButtons}
         </Box>
 
-        {/* Right: Social Media + Phone */}
+        {/* Right: Forms + Social Media + Phone */}
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 1 }}>
+          <Button
+            component="a"
+            href="/pdfs/hippa-form.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outlined"
+            disableRipple
+            sx={{
+              textTransform: "none",
+              fontSize: 14,
+              fontWeight: 700,
+              letterSpacing: 0.2,
+              borderColor: "#0f766e",
+              color: "#0f766e",
+              "&:hover": { 
+                borderColor: alpha("#0f766e", 0.8),
+                backgroundColor: alpha("#0f766e", 0.04),
+                color: "#0f766e"
+              },
+            }}
+          >
+            HIPAA Form
+          </Button>
+          <Button
+            component="a"
+            href="/pdfs/policy-agreement.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="outlined"
+            disableRipple
+            sx={{
+              textTransform: "none",
+              fontSize: 14,
+              fontWeight: 700,
+              letterSpacing: 0.2,
+              borderColor: "#0f766e",
+              color: "#0f766e",
+              "&:hover": { 
+                borderColor: alpha("#0f766e", 0.8),
+                backgroundColor: alpha("#0f766e", 0.04),
+                color: "#0f766e"
+              },
+            }}
+          >
+            Policy Agreement
+          </Button>
           <IconButton
             component="a"
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/dkmdpc"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -158,21 +203,6 @@ export default function HeaderBar() {
             }}
           >
             <Facebook fontSize="small" />
-          </IconButton>
-          <IconButton
-            component="a"
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            sx={{
-              color: "text.primary",
-              "&:hover": {
-                bgcolor: "rgba(0, 0, 0, 0.04)",
-              },
-            }}
-          >
-            <Instagram fontSize="small" />
           </IconButton>
           <PhoneLink />
         </Box>
