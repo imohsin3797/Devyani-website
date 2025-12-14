@@ -55,10 +55,15 @@ export default function AboutUsCards() {
           >
             <CardMedia
               component="img"
-              height="240"
               image="/images/devyani.png"
               alt="Doctor with young patient"
-              sx={{ objectFit: "cover" }}
+              sx={{ 
+                objectFit: "cover", 
+                width: "100%",
+                height: 480,
+                minHeight: 480,
+                maxHeight: 480
+              }}
             />
             <CardContent sx={{ textAlign: 'center' }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 700 }}>
@@ -87,17 +92,22 @@ Dr. Khambete obtained her medical degree from Seth GS Medical College and comple
           >
             <CardMedia
               component="img"
-              height="240"
-              image="/images/pavarthi.png"
-              alt="Doctor consulting with family"
-              sx={{ objectFit: "cover" }}
+              image="/images/provider-2.jpeg"
+              alt="Pediatric Nurse Practitioner"
+              sx={{ 
+                objectFit: "cover", 
+                width: "100%",
+                height: 480,
+                minHeight: 480,
+                maxHeight: 480
+              }}
             />
             <CardContent sx={{ textAlign: 'center' }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 700 }}>
-                Parvathi Sivaram, MD
+                Vanesa Galley, CPNP
               </Typography>
               <Typography variant="body1">
-              Dr. Sivaram obtained her medical degree from University of Coimatore Medical College and completed her Pediatric Residency at Henry Ford Hospital and is board certified in pediatrics. She is also board certified in Allergy and Immunology which she completed at Henry Ford Hospital as well.
+                Vanesa Galley, CPNP joined the team in January 2025 and is certified through the PNCB as a Pediatric Nurse Practitioner. She received her Master's Degree in Pediatric Primary Care from West Virginia University and completed her nursing education at the University of Cincinnati. Previously, she worked as a Registered Nurse in the Emergency Department. Vanesa is dedicated to providing exceptional primary care and supporting families throughout their child's health journey.
               </Typography>
             </CardContent>
           </Card>

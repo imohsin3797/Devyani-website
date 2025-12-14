@@ -10,7 +10,7 @@ import Divider from "@mui/material/Divider";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Link from "@mui/material/Link";
-import { Place, AccessTime, Email, Phone, Fax } from "@mui/icons-material";
+import { Place, AccessTime, Phone } from "@mui/icons-material";
 
 const GALLERY_IMAGES = [
   {
@@ -99,10 +99,6 @@ export default function ContactInfo() {
                       <Typography variant="body2" sx={{ color: "black" }}>(248) 682-3300</Typography>
                     </Link>
                   </Stack>
-                  <Stack direction="row" spacing={1} alignItems="center">
-                    <Fax fontSize="small" sx={{ color: "black" }} />
-                    <Typography variant="body2" sx={{ color: "black" }}>(248) 682-0026</Typography>
-                  </Stack>
                 </Stack>
               </Box>
             </Stack>
@@ -139,10 +135,6 @@ export default function ContactInfo() {
                       <Typography variant="body2" sx={{ color: "black" }}>(248) 690-9285</Typography>
                     </Link>
                   </Stack>
-                  <Stack direction="row" spacing={1} alignItems="center">
-                    <Fax fontSize="small" sx={{ color: "black" }} />
-                    <Typography variant="body2" sx={{ color: "black" }}>(248) 690-9603</Typography>
-                  </Stack>
                 </Stack>
               </Box>
             </Stack>
@@ -172,34 +164,6 @@ export default function ContactInfo() {
               </Box>
             </Stack>
 
-            {/* Email */}
-            <Stack direction="row" spacing={2} alignItems="flex-start">
-              <Box
-                sx={{
-                  width: 40,
-                  height: 40,
-                  borderRadius: 2,
-                  bgcolor: "#E4F2F0",
-                  display: "grid",
-                  placeItems: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <Email fontSize="small" sx={{ color: "black" }} />
-              </Box>
-              <Box>
-                <Typography variant="h6" sx={{ fontWeight: 700, mb: 0.5, fontSize: { xs: '1rem', md: '1.25rem' }, color: "black" }}>
-                  Email Us
-                </Typography>
-                <Link
-                  href="mailto:info@devyani-pediatrics.com"
-                  underline="hover"
-                  sx={{ color: "black" }}
-                >
-                  info@devyani-pediatrics.com
-                </Link>
-              </Box>
-            </Stack>
           </Box>
 
           {/* Divider - only show on desktop */}

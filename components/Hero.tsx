@@ -21,7 +21,7 @@ type Props = {
 
 export default function Hero({
   imageSrc = "/images/hero-new2.png",
-  title = "Devyani Khambete MDPC",
+  title = "Devyani Khambete, MD, PC",
   subtitle = "Compassionate, evidence-based care for newborns through teens.",
   cardColor = "#BFE3E0",
 }: Props) {

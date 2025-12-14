@@ -132,7 +132,7 @@ export default function HeaderBar() {
               fontFamily: `'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif`,
             }}
           >
-            Devyani Khambete MDPC
+            Devyani Khambete, MD, PC
           </Typography>
         </Box>
 

@@ -9,7 +9,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Devyani Khambete MDPC",
+  title: "Devyani Khambete, MD, PC",
   description: "Comprehensive pediatric care services in Bloomfield Hills, MI. Expert medical care for children of all ages.",
 };
 

@@ -40,14 +40,14 @@ const SERVICES: Service[] = [
     desc:
       "Personalized management for children with special needs. We have an embedded care manager in-house to coordinate care, connect families with resources, and ensure comprehensive support for your child's unique healthcare needs.",
     Icon: SupportAgent,
-    imageSrc: "/images/care-management.jpg.webp",
+    imageSrc: "/images/care-management.jpg",
   },
   {
     title: "Vaccine Hesitancy Support",
     desc:
       "We provide compassionate, non-judgmental support for families with vaccine hesitancy. Our providers take time to listen to your concerns, answer questions with evidence-based information, and work collaboratively to create a vaccination plan that feels right for your family.",
     Icon: Vaccines,
-    imageSrc: "/images/vaccine-hesitancy.jpg",
+    imageSrc: "/images/vaccine-hesitancy.jpg.webp",
   },
   {
     title: "Sports/Activity Physicals",
@@ -68,7 +68,7 @@ const SERVICES: Service[] = [
     desc:
       "Comprehensive care including medication initiation, creating an asthma action plan, and adjustment of therapies to improve control and quality of life.",
     Icon: Healing,
-    imageSrc: "/images/asthma-treatment.jpg",
+    imageSrc: "/images/asthma-treatment.jpg.webp",
   },
   {
     title: "Child Dental",
