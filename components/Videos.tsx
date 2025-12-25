@@ -9,10 +9,8 @@ import Typography from "@mui/material/Typography";
 import { alpha } from "@mui/material/styles";
 
 const VIDEOS = [
-  { title: "Using an Epipen", src: "https://youtu.be/dEQNwZojEw4" },
-  { title: "Antibiotics", src: "https://youtu.be/S7N5zy8SzWA" },
-  { title: "Constipation and Encopresis", src: "https://youtu.be/SgBj7Mc_4sc" },
-  { title: "Inhaler Tutorial", src: "https://youtu.be/ma_cmlU9DxU" },
+  { title: "Video 1", src: "https://www.youtube.com/watch?v=rIkuBhP7mQY" },
+  { title: "Video 2", src: "https://www.youtube.com/watch?v=KTWkmTmv3aU" },
 ];
 
 // Normalize any YouTube URL to the embeddable form
