@@ -68,7 +68,7 @@ export default function VaccinePolicy() {
                   lineHeight: 1.8
                 }}
               >
-                Our practice firmly believes that immunizations are one of the most effective ways to protect children and our community from serious, preventable diseases. We follow the immunization schedules recommended by the CDC and the American Academy of Pediatrics (AAP).
+                Our practice firmly believes that immunizations are one of the most effective ways to protect children and our community from serious, preventable diseases. We follow the immunization schedules recommended by the American Academy of Pediatrics (AAP).
               </Typography>
               <Typography
                 variant="body1"
